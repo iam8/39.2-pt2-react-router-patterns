@@ -7,7 +7,7 @@ function ColorDetails () {
 
     return (
         <div className="ColorDetails">
-
+            Color Details here
         </div>
     )
 }

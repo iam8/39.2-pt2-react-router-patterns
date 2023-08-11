@@ -7,7 +7,7 @@ function ColorList () {
 
     return (
         <div className="ColorList">
-
+            Color List here
         </div>
     )
 }

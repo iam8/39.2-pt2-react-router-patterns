@@ -7,7 +7,7 @@ function AddColorBanner () {
 
     return (
         <div className="AddColorBanner">
-
+            Add color banner here
         </div>
     )
 }
