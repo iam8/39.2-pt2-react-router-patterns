@@ -9,20 +9,19 @@ import ColorDetails from "./ColorDetails";
 function Routes () {
     return (
         <Switch>
-            <Route exact to="/colors">
+            <Route exact path="/colors">
                 <HomePage />
             </Route>
 
-            <Route exact to="/colors/new">
+            <Route exact path="/colors/new">
                 <NewColorForm />
             </Route>
 
-            <Route exact to="/colors/:color">
+            <Route exact path="/colors/:color">
                 <ColorDetails />
             </Route>
 
             <Redirect to="/colors"/>
-
         </Switch>
     )
 }
