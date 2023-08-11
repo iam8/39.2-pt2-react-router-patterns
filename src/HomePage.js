@@ -7,12 +7,14 @@ import "./HomePage.css";
 
 function HomePage () {
 
+    const initColors = ["Cyan", "Dark orchid", "Lawn green", "Orange red"];
+
     return (
         <div className="HomePage">
             <AddColorBanner />
 
             <p>Please select a color:</p>
-            <ColorList />
+            <ColorList colors={initColors}/>
 
         </div>
     )
