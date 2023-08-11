@@ -6,9 +6,9 @@
  *
  * Return the formatted color name (string).
  */
-function formatColorName(color) {
+function formatCssColorName(color) {
     return color.toLowerCase().replace(" ", "");
 }
 
 
-export default formatColorName;
+export default formatCssColorName;
