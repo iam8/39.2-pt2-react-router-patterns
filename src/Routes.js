@@ -3,8 +3,8 @@ import {Route, Switch, Redirect} from "react-router-dom";
 
 import HomePage from "./HomePage";
 import NewColorForm from "./NewColorForm";
-import FormatCssColorDetails from "./FormatCssColorDetails";
-import formatCssColorName from "./helpers/formatCssColorName";
+import FilteredColorDetails from "./FilteredColorDetails";
+import formatUrlColorName from "./helpers/formatUrlColorName";
 
 
 function Routes () {
@@ -12,40 +12,37 @@ function Routes () {
     const TEST_COLORS = [
         {
             fullName: "Cyan",
-            cssName: "cyan"
+            urlName: "cyan",
+            value: "cyan"
         },
         {
             fullName: "Dark orchid",
-            cssName: "darkorchid"
+            urlName: "darkorchid",
+            value: "darkorchid"
         },
         {
             fullName: "Lawn green",
-            cssName: "lawngreen"
+            urlName: "lawngreen",
+            value: "lawngreen"
         },
         {
             fullName: "Orange red",
-            cssName: "orangered"
+            urlName: "orangered",
+            value: "orangered"
         }
     ];
 
     const [colors, setColors] = useState(TEST_COLORS);
 
     // Add a new color entry to list in state.
-    const addColor = (fullCol) => {
-        setColors(colors => {
-            const updatedColors = colors.map(color => {
-                return {...color}
-            });
+    const addColor = ({colorName, colorValue}) => {
+        const newColor = {
+            fullName: colorName,
+            urlName: formatUrlColorName(colorName),
+            value: colorValue
+        }
 
-            updatedColors.push(
-                {
-                    fullName: fullCol,
-                    cssName: formatCssColorName(fullCol)
-                }
-            );
-
-            return updatedColors;
-        });
+        setColors(colors => [...colors, newColor]);
     };
 
     return (
@@ -59,7 +56,7 @@ function Routes () {
             </Route>
 
             <Route exact path="/colors/:color">
-                <FormatCssColorDetails colors={colors}/>
+                <FilteredColorDetails colors={colors}/>
             </Route>
 
             <Redirect to="/colors"/>
