@@ -1,6 +1,6 @@
 
 /**
- * Format a given color name to be usable in CSS and links.
+ * Format a given color name (string) to be usable in CSS and links.
  *
  * Specifics: lowercase the color name and remove all spaces (if any).
  *
