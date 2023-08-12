@@ -32,7 +32,9 @@ function NewColorForm ({addColor}) {
     return (
         <div className="NewColorForm">
 
-            <h1>Add a New Color</h1>
+            <h1 className="NewColorForm-heading">
+                Add a New Color
+            </h1>
 
             <form onSubmit={handleSubmit}>
 
