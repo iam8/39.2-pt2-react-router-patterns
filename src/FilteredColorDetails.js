@@ -2,12 +2,12 @@ import React from "react";
 import { useParams, Redirect } from "react-router-dom";
 
 import ColorDetails from "./ColorDetails";
-// import "./FormatCssColorDetails.css";
+// import "./FilteredColorDetails.css";
 
 
-function FormatCssColorDetails ({colors}) {
+function FilteredColorDetails ({colors}) {
     const {color} = useParams();
-    const colorMatch = colors.find(col => col.cssName === color);
+    const colorMatch = colors.find(col => col.urlName === color);
 
     if (!colorMatch) {
         return <Redirect to="/colors"/>
@@ -17,4 +17,4 @@ function FormatCssColorDetails ({colors}) {
 }
 
 
-export default FormatCssColorDetails;
+export default FilteredColorDetails;
