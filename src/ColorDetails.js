@@ -1,13 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./ColorDetails.css";
 
 
-function ColorDetails () {
+function ColorDetails ({color}) {
+
+    const style = {
+        backgroundColor: color.cssName
+    };
 
     return (
-        <div className="ColorDetails">
-            Color Details here
+        <div className="ColorDetails" style={style}>
+
+            <div className="ColorDetails-text">
+                This is {color.fullName}. Isn't it beautiful?
+            </div>
+
+            <div className="ColorDetails-homelink">
+                <Link to="/colors">
+                    Back to home
+                </Link>
+            </div>
+
         </div>
     )
 }
