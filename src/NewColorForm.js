@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 import "./NewColorForm.css";
 
@@ -67,6 +67,12 @@ function NewColorForm ({addColor}) {
                     Add color!
                 </button>
             </form>
+
+            <div>
+                <Link to="/colors">
+                    Go back
+                </Link>
+            </div>
 
         </div>
     )
