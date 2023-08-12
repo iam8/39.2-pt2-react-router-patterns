@@ -8,7 +8,7 @@ function ColorList ({colors}) {
 
     return (
         <div className="ColorList">
-            <ul>
+            <ul className="ColorList-list">
                 {
                     colors.map(({fullName, urlName}, ind) => {
                         return (
