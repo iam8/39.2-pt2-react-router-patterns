@@ -1,0 +1,11 @@
+.NewColorForm {
+    height: 100vh;
+    background-image: url("./images/rainbow.jpg");
+    background-size: cover;
+}
+
+.NewColorForm-heading {
+    margin-top: 0px;
+    padding-top: 20px;
+    text-align: center;
+}
