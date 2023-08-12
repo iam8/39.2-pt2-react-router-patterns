@@ -1,0 +1,6 @@
+.HomePage-color-select {
+    margin: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
