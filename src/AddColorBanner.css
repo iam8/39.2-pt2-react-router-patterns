@@ -1,0 +1,17 @@
+.AddColorBanner {
+    text-align: center;
+    background-color: black;
+    height: 30vh;
+}
+
+.AddColorBanner-heading {
+    color: white;
+    margin-top: 0px;
+    padding-top: 30px;
+}
+
+.AddColorBanner-addlink a {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
