@@ -10,10 +10,10 @@ function ColorList ({colors}) {
         <div className="ColorList">
             <ul>
                 {
-                    colors.map(({fullName, cssName}, ind) => {
+                    colors.map(({fullName, urlName}, ind) => {
                         return (
                             <li key={ind}>
-                                <Link to={`/colors/${cssName}`}>
+                                <Link to={`/colors/${urlName}`}>
                                     {fullName}
                                 </Link>
                             </li>
