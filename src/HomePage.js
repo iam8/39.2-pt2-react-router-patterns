@@ -5,16 +5,14 @@ import ColorList from "./ColorList";
 import "./HomePage.css";
 
 
-function HomePage () {
-
-    const initColors = ["Cyan", "Dark orchid", "Lawn green", "Orange red"];
+function HomePage ({colors}) {
 
     return (
         <div className="HomePage">
             <AddColorBanner />
 
             <p>Please select a color:</p>
-            <ColorList colors={initColors}/>
+            <ColorList colors={colors}/>
 
         </div>
     )
