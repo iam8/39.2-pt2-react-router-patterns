@@ -11,8 +11,10 @@ function HomePage ({colors}) {
         <div className="HomePage">
             <AddColorBanner />
 
-            <p>Please select a color:</p>
-            <ColorList colors={colors}/>
+            <div className="HomePage-color-select">
+                <p>Please select a color:</p>
+                <ColorList colors={colors}/>
+            </div>
 
         </div>
     )
