@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import formatColorName from "./helpers/formatColorName";
 import "./ColorList.css";
 
 
@@ -11,11 +10,11 @@ function ColorList ({colors}) {
         <div className="ColorList">
             <ul>
                 {
-                    colors.map((color, ind) => {
+                    colors.map(({fullName, cssName}, ind) => {
                         return (
                             <li key={ind}>
-                                <Link to={`/colors/${formatColorName(color)}`}>
-                                    {color}
+                                <Link to={`/colors/${cssName}`}>
+                                    {fullName}
                                 </Link>
                             </li>
                         );
