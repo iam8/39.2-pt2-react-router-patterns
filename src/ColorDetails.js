@@ -7,14 +7,14 @@ import "./ColorDetails.css";
 function ColorDetails ({color}) {
 
     const style = {
-        backgroundColor: color.cssName
+        backgroundColor: color.value
     };
 
     return (
         <div className="ColorDetails" style={style}>
 
             <div className="ColorDetails-text">
-                This is {color.fullName}. Isn't it beautiful?
+                This is {color.fullName.toLowerCase()}. Isn't it beautiful?
             </div>
 
             <div className="ColorDetails-homelink">
