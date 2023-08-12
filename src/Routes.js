@@ -42,7 +42,7 @@ function Routes () {
             value: colorValue
         }
 
-        setColors(colors => [...colors, newColor]);
+        setColors(colors => [newColor, ...colors]);
     };
 
     return (
