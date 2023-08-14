@@ -23,7 +23,6 @@ function NewColorForm ({addColor}) {
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        console.log("Form submitted");
         addColor(formData);
         setFormData(INIT_FORM_DATA);
         history.push("/colors");
