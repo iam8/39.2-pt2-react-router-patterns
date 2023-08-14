@@ -36,41 +36,45 @@ function NewColorForm ({addColor}) {
                 Add a New Color
             </h1>
 
-            <form onSubmit={handleSubmit}>
+            <div className="NewColorForm-content">
+                <div className="NewColorForm-form">
+                    <form onSubmit={handleSubmit}>
 
-                <div>
-                    <label htmlFor="colorName">
-                        Enter a name for this color:
-                    </label>
-                    <input
-                        id="colorName"
-                        name="colorName"
-                        type="text"
-                        placeholder="E.g. 'red', 'green', 'violet'..."
-                        value={formData.colorName}
-                        onChange={handleChange}
-                    />
+                        <div className="NewColorForm-full-input">
+                            <label htmlFor="colorName">
+                                Enter a name for this color:
+                            </label>
+                            <input
+                                id="colorName"
+                                name="colorName"
+                                type="text"
+                                placeholder="E.g. 'red', 'green', 'violet'..."
+                                value={formData.colorName}
+                                onChange={handleChange}
+                            />
+                        </div>
+
+                        <div className="NewColorForm-full-input">
+                            <label htmlFor="colorValue">
+                                Choose a value for this color:
+                            </label>
+                            <input
+                                id="colorValue"
+                                name="colorValue"
+                                type="color"
+                                value={formData.colorValue}
+                                onChange={handleChange}
+                            />
+                        </div>
+
+                        <button id="NewColorForm-add-btn">
+                            Add color!
+                        </button>
+                    </form>
                 </div>
+            </div>
 
-                <div>
-                    <label htmlFor="colorValue">
-                        Choose a value for this color:
-                    </label>
-                    <input
-                        id="colorValue"
-                        name="colorValue"
-                        type="color"
-                        value={formData.colorValue}
-                        onChange={handleChange}
-                    />
-                </div>
-
-                <button>
-                    Add color!
-                </button>
-            </form>
-
-            <div>
+            <div className="NewColorForm-backlink">
                 <Link to="/colors">
                     Go back
                 </Link>
